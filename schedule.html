@@ -1,49 +1,82 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<meta charset="utf-8">
-	<title>Schedule</title>
-	<link rel="stylesheet" href="assets/stylesheets/main.css">
-	<link rel="stylesheet"
-    href="http://fonts.googleapis.com/css?family=Lato:100,300,400">
+    <meta charset="utf-8">
+    <title>Schedule</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="assets/stylesheets/style.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400">
 </head>
+
 <body>
-	<header class="primary-header container group">
-        <h1 class="logo">
-            <a href="index.html">Styles <br/> Conference</a>
-        </h1>
-        <h3 class="tagline">August 24&ndash;26th &mdash; Chicago, IL</h3>
-        <nav class="nav primary-nav">
-            <ul>
-                <li><a href="index.html">Home</a></li><!--
-             --><li><a href="speakers.html">Speakers</a></li><!--
-             --><li><a href="schedule.html">Schedule</a></li><!--
-             --><li><a href="venue.html">Venue</a></li><!--
-             --><li><a href="register.html">Register</a></li>
-            </ul>
+    <header class="primary-header group">
+        <nav id="header-nav" class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <h1 class="logo">
+                        <a href="index.html">Styles <br/> Conference</a>
+                    </h1>
+
+
+                    <button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <h3 class="tagline">August 24&ndash;26th &mdash; Chicago, IL</h3>
+
+                <nav id="collapsable-nav" class="collapse navbar-collapse primary-nav">
+                    <ul id="nav-list" class="nav navbar-nav navbar-right">
+                        <li id="navHomeButton" class="visible-xs">
+                            <a href="index.html">
+                            Home</a>
+                        </li>
+                        <li id="navMenuButton" ui-sref-active="active">
+                            <a class="nav-link" href="speakers.html">Speakers</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="schedule.html">Schedule</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="venue.html">Venue</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="register.html">Register</a>
+
+                        </li>
+                    </ul>
+                    <!-- #nav-list -->
+                </nav>
+                <!-- .collapse .navbar-collapse -->
+            </div>
+            <!-- .container -->
         </nav>
+        <!-- #header-nav -->
     </header>
     <section class="row-alt">
         <div class="lead container">
-            <h1>Speakers</h1>
+            <h1>Schedule</h1>
             <p>We&#8217;re happy to welcome over twenty speakers to present on the industry&#8217;s latest technologies. Prepare for an inspiration extravaganza.</p>
         </div>
     </section>
     <section class="row">
-    	<div class="container">
-    		<table>
-    			<thead>
-    				<tr>
-    					<th scope="row">Workshops</th>
-    					<td class="schedule-offset" colspan="2">August 24th</td>
-    				</tr>
-    			</thead>
-    			<tbody>
-    				<tr>
-    					<th scope="row"><time datetime="08:30:00">8:30 AM</time></th>
-    					<td class="schedule-offset" colspan="2">Registration</td>
-    				</tr>
-    				<tr>
+        <div class="container">
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="row">Workshops</th>
+                        <td class="schedule-offset" colspan="2">August 24th</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row"><time datetime="08:30:00">8:30 AM</time></th>
+                        <td class="schedule-offset" colspan="2">Registration</td>
+                    </tr>
+                    <tr>
                         <th scope="row"><time datetime="09:00:00">9:00 AM</time></th>
                         <td>
                             <a href="speakers.html#adam-connor">
@@ -63,7 +96,7 @@
                             <time datetime="12:30:00">12:30 PM</time>
                         </th>
                         <td class="schedule-offset" colspan="2">
-                        Lunch
+                            Lunch
                         </td>
                     </tr>
                     <tr>
@@ -83,11 +116,11 @@
                             </a>
                         </td>
                     </tr>
-    				
-    			</tbody>
-    		</table>
-    	</div>
-    	
+
+                </tbody>
+            </table>
+        </div>
+
     </section>
 
 
@@ -103,17 +136,27 @@
 
     <footer class="primary-footer container group">
         <small>&copy; Styles Conference</small>
-        <nav class="nav">
+        <nav class="nav footer-nav">
             <ul>
-                <li><a href="index.html">Home</a></li><!--
-             --><li><a href="speakers.html">Speakers</a></li><!--
-             --><li><a href="schedule.html">Schedule</a></li><!--
-             --><li><a href="venue.html">Venue</a></li><!--
-             --><li><a href="register.html">Register</a></li>
+                <li><a href="index.html">Home</a></li>
+                <!--
+             -->
+                <li><a href="speakers.html">Speakers</a></li>
+                <!--
+             -->
+                <li><a href="schedule.html">Schedule</a></li>
+                <!--
+             -->
+                <li><a href="venue.html">Venue</a></li>
+                <!--
+             -->
+                <li><a href="register.html">Register</a></li>
             </ul>
         </nav>
 
     </footer>
-
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 </body>
+
 </html>
